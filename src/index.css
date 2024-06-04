@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+@font-face {
+	font-family: 'DMSans-Regular';
+	src: url("./assets/fonts/DMSans-Regular.ttf") format('truetype');
+	font-weight: regular;
+}
+  
+@font-face {
+	font-family: 'DMSans-Medium';
+	src: url("./assets/fonts/DMSans-Medium.ttf") format('truetype');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'DMSans-SemiBold';
+	src: url("./assets/fonts/DMSans-SemiBold.ttf") format('truetype');
+	font-weight: semibold;
+}
+
+@font-face {
+	font-family: 'DMSans-Bold';
+	src: url("./assets/fonts/DMSans-Bold.ttf") format('truetype');
+	font-weight: bold;
+}
+
+.dmsans-regular {
+	font-family: 'DMSans-Regular', sans-serif;
+	font-weight: regular;
+}
+
+.dmsans-medium {
+	font-family: 'DMSans-Medium', sans-serif;
+	font-weight: 500;
+}
+
+.dmsans-bold {
+	font-family: "DMSans-Bold", sans-serif;
+	font-weight: bold;
+}
+
+.cards-selection-container {
+	max-width: 300px;
+}
