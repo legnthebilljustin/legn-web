@@ -9,7 +9,12 @@ import {
 	Transactions, 
 	PageNotFound,
 	Unauthenticated,
-	Unauthorized
+	Unauthorized,
+	Dashboard,
+	Crypto,
+	Trades,
+	Deposits,
+	CryptoDashboard
 } from "@/pages";
 
 const router = createBrowserRouter([
@@ -18,6 +23,10 @@ const router = createBrowserRouter([
         element: <App />,
         errorElement: <PageNotFound />,
         children: [
+			{
+				path: "/dashboard",
+				element: <ProtectedRoute><Dashboard /></ProtectedRoute>
+			},
 			{
 				path: "/creditCards",
 				element: <ProtectedRoute><CreditCards /></ProtectedRoute>,
@@ -29,6 +38,22 @@ const router = createBrowserRouter([
 			{
 				path: "/creditCardTransactions/:creditCardUuid",
 				element: <ProtectedRoute><Transactions /></ProtectedRoute>
+			},
+			{
+				path: "/crypto",
+				element: <ProtectedRoute><Crypto /></ProtectedRoute>
+			},
+			{
+				path: "/crypto/dashboard",
+				element: <ProtectedRoute><CryptoDashboard /></ProtectedRoute>
+			},
+			{
+				path: "/crypto/trades",
+				element: <ProtectedRoute><Trades /></ProtectedRoute>
+			},
+			{
+				path: "/crypto/deposits",
+				element: <ProtectedRoute><Deposits /></ProtectedRoute>
 			}
         ]
    },

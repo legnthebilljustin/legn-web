@@ -2,10 +2,10 @@ export default function PageNotFound() {
     return (
         <div className="mt-48 text-center">
             <div className="text-3xl font-medium">
-                Unauthorized access.
+                Page not found.
             </div>
             <div className="text-base mt-4 text-gray-400">
-                We are sorry to inform you that you do not have sufficient privileges to access this resource.
+                We are not able to provide the page that you are looking for.
             </div>
         </div>
     )
