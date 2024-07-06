@@ -11,7 +11,6 @@ import {
 	Unauthenticated,
 	Unauthorized,
 	Dashboard,
-	Crypto,
 	Trades,
 	Deposits,
 	CryptoDashboard
@@ -38,10 +37,6 @@ const router = createBrowserRouter([
 			{
 				path: "/creditCardTransactions/:creditCardUuid",
 				element: <ProtectedRoute><Transactions /></ProtectedRoute>
-			},
-			{
-				path: "/crypto",
-				element: <ProtectedRoute><Crypto /></ProtectedRoute>
 			},
 			{
 				path: "/crypto/dashboard",

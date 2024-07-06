@@ -13,7 +13,7 @@ export default function Dashboard() {
             name: "Credit Cards"
         },
         {
-            path: "/crypto",
+            path: "/crypto/dashboard",
             name: "Crypto Tracker"
         }
     ]

@@ -39,7 +39,7 @@ const Login: React.FC<{}> = () => {
     useEffect(() => {
         if (data && data.user) {
             updateUser(data.user)
-            window.location.href = "/creditCards"
+            window.location.href = "/dashboard"
         }
         
     }, [data])

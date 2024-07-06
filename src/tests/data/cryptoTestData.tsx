@@ -1,4 +1,4 @@
-import { Deposit } from "@/types/crypto";
+import { CryptoDetails, Deposit } from "@/types/crypto";
 
 export const depositsTestData: Deposit[] = [
     {
@@ -19,4 +19,22 @@ export const depositsTestData: Deposit[] = [
         totalAmount: 241231,
         date: "2024-02-12"
     },
+]
+
+export const savedCryptoTestData: CryptoDetails[] = [
+    {
+        uuid: "9q82hndjksanjkwndjwd",
+        name: "Bitcoin",
+        code: "BTC"
+    },
+    {
+        uuid: "15t3m1qinekjawd23raw",
+        name: "Ethereum",
+        code: "ETH"
+    },
+    {
+        uuid: "15314awgwa245rtgqa",
+        name: "Cardano",
+        code: "ADA"
+    }
 ]

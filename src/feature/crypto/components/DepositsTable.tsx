@@ -22,7 +22,7 @@ export default function DepositsTable({ deposits }: Props) {
                     {(item: Deposit) => (
                         <TableRow key={item.uuid}>
                             <TableCell className="dmsans-regular text-sm capitalize">
-                                Php { item?.pesoAmount ? centsToFiat(item.pesoAmount) : "0.00" }
+                                Php { item?.depositAmount ? centsToFiat(item.depositAmount) : "0.00" }
                             </TableCell>
                             <TableCell className="flex text-sm">
                                 <span>$ { item?.exchangePrice ? centsToFiat(item.exchangePrice) : "0.00" }</span>&nbsp;

@@ -7,3 +7,9 @@ export type Deposit = {
     exchangePrice: number
     totalAmount: number
 }
+
+export type CryptoDetails = {
+    uuid: string
+    name: string
+    code: string
+}
