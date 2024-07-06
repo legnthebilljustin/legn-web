@@ -13,7 +13,8 @@ import {
 	Dashboard,
 	Trades,
 	Deposits,
-	CryptoDashboard
+	CryptoDashboard,
+	TradeHistory
 } from "@/pages";
 
 const router = createBrowserRouter([
@@ -49,7 +50,11 @@ const router = createBrowserRouter([
 			{
 				path: "/crypto/deposits",
 				element: <ProtectedRoute><Deposits /></ProtectedRoute>
-			}
+			},
+			{
+				path: "/crypto/tradehistory/:cryptoUuid",
+				element: <ProtectedRoute><TradeHistory /></ProtectedRoute>
+			},
         ]
    },
    {

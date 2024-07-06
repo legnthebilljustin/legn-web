@@ -36,5 +36,20 @@ export const savedCryptoTestData: CryptoDetails[] = [
         uuid: "15314awgwa245rtgqa",
         name: "Cardano",
         code: "ADA"
-    }
+    },
+    {
+        uuid: "9q82hndjksanjkwndjwd",
+        name: "Bitcoin",
+        code: "BTC"
+    },
+    {
+        uuid: "15t3m1qinekjawd23raw",
+        name: "Ethereum",
+        code: "ETH"
+    },
+    {
+        uuid: "15314awgwa245rtgqa",
+        name: "Cardano",
+        code: "ADA"
+    },
 ]
