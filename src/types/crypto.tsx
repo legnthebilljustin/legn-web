@@ -13,3 +13,12 @@ export type CryptoDetails = {
     name: string
     code: string
 }
+
+export type TradeDetails = {
+    uuid: string
+    entryPrice: number
+    purchasedAmount: number
+    fee: number
+    finalCryptoAmount: number
+    purchaseDate: string
+}

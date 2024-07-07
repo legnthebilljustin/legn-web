@@ -1,33 +1,32 @@
 import { AddNoteIcon } from "@/assets/icons/AddNoteIcon";
 import { InputWithValidation } from "@/components";
-import { DEPOSIT_AMOUNT_KEY, DEPOSIT_AMOUNT_LABEL, DEPOSIT_DATE_KEY, DEPOSIT_DATE_LABEL, TOTAL_AMOUNT_KEY, TOTAL_AMOUNT_LABEL } from "@/constants/cryptolabels";
 import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from "@nextui-org/react";
 
 export default function AddDepositForm() {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
-    // this should be a custom hook
     const handleInputChange = () => {
 
     }
+
     return (
         <>
             <div className="text-right">
-                <Button color="primary" size="sm" className="my-2"
+                <Button color="primary" size="sm" variant="shadow"
                     startContent={<AddNoteIcon />} onClick={onOpen}
                 >
-                    Add Deposit
+                    Add Trade
                 </Button>
             </div>
             <Modal backdrop="blur" size="md" className="dark py-6" isOpen={isOpen} onClose={onClose}>
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            <ModalHeader>New Deposit</ModalHeader>
+                            <ModalHeader>Add trade</ModalHeader>
                             <ModalBody>
                                 <InputWithValidation
                                     type="text"
-                                    label={DEPOSIT_AMOUNT_LABEL} name={DEPOSIT_AMOUNT_KEY}
+                                    label="Entry Price" name="entryPrice"
                                     isRequired={true}
                                     value={"awdsa"}
                                     onChange={handleInputChange}
@@ -35,7 +34,7 @@ export default function AddDepositForm() {
                                 />
                                 <InputWithValidation
                                     type="text"
-                                    label="Exchange Token" name="exchangeToken"
+                                    label="Purchased Amount" name="purchasedAmount"
                                     isRequired={true}
                                     value={"awdsa"}
                                     onChange={handleInputChange}
@@ -43,7 +42,7 @@ export default function AddDepositForm() {
                                 />
                                 <InputWithValidation
                                     type="text"
-                                    label="Exchange Price" name="exchangePrice"
+                                    label="Fee" name="fee"
                                     isRequired={true}
                                     value={"awdsa"}
                                     onChange={handleInputChange}
@@ -51,7 +50,7 @@ export default function AddDepositForm() {
                                 />
                                 <InputWithValidation
                                     type="text"
-                                    label={TOTAL_AMOUNT_LABEL} name={TOTAL_AMOUNT_KEY}
+                                    label="Final Crypto Amount" name="finalCryptoAmount"
                                     isRequired={true}
                                     value={"awdsa"}
                                     onChange={handleInputChange}
@@ -59,12 +58,13 @@ export default function AddDepositForm() {
                                 />
                                 <InputWithValidation
                                     type="text"
-                                    label={DEPOSIT_DATE_LABEL} name={DEPOSIT_DATE_KEY}
+                                    label="Date" name="purchaseDate"
                                     isRequired={true}
                                     value={"awdsa"}
                                     onChange={handleInputChange}
                                     validationError=""
                                 />
+
                             </ModalBody>
                             <ModalFooter>
                                 <Button color="danger" variant="light" onPress={onClose}>

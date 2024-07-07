@@ -1,4 +1,4 @@
-import { CryptoDetails, Deposit } from "@/types/crypto";
+import { CryptoDetails, Deposit, TradeDetails } from "@/types/crypto";
 
 export const depositsTestData: Deposit[] = [
     {
@@ -51,5 +51,40 @@ export const savedCryptoTestData: CryptoDetails[] = [
         uuid: "15314awgwa245rtgqa",
         name: "Cardano",
         code: "ADA"
+    },
+]
+
+export const tradesTestData: TradeDetails[] = [
+    {
+        uuid: "892u1892u31321",
+        entryPrice: 10000,
+        purchasedAmount: 1000000,
+        fee: 0.001209,
+        finalCryptoAmount: 1.3212421,
+        purchaseDate: "2024-02-03",
+    },
+    {
+        uuid: "892u1892u31321",
+        entryPrice: 10000,
+        purchasedAmount: 1000000,
+        fee: 0.001209,
+        finalCryptoAmount: 1.3212421,
+        purchaseDate: "2024-02-03",
+    },
+    {
+        uuid: "892u1892u31321",
+        entryPrice: 10000,
+        purchasedAmount: 1000000,
+        fee: 0.001209,
+        finalCryptoAmount: 1.3212421,
+        purchaseDate: "2024-02-03",
+    },
+    {
+        uuid: "892u1892u31321",
+        entryPrice: 10000,
+        purchasedAmount: 1000000,
+        fee: 0.001209,
+        finalCryptoAmount: 1.3212421,
+        purchaseDate: "2024-02-03",
     },
 ]

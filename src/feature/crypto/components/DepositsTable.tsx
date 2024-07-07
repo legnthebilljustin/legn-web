@@ -1,4 +1,4 @@
-import { DEPOSITS_TABLE_COLUMNS } from "@/constants/tableheaders";
+import { DEPOSITS_TABLE_COLUMNS } from "@/constants/cryptolabels";
 import { Deposit } from "@/types/crypto";
 import { centsToFiat } from "@/utils/currency";
 import { Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from "@nextui-org/react";
