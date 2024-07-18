@@ -1,4 +1,7 @@
 export const convertToCurrency = (number: number) => {
+    if (typeof number !== "number") {
+        return "Conversion to currency failed."
+    }
     return number.toLocaleString('en-US', { minimumFractionDigits: 2 });
 }
 

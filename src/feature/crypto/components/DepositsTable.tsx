@@ -35,7 +35,7 @@ export default function DepositsTable({ deposits }: Props) {
                                 $ { item?.totalAmount ? centsToFiat(item.totalAmount) : "0.00" }
                             </TableCell>
                             <TableCell>
-                                { item?.date ? item.date : "-" }
+                                { item?.depositDate ? item.depositDate : "-" }
                             </TableCell>
                         </TableRow>
                     )}

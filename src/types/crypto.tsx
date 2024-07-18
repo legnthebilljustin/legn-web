@@ -1,11 +1,11 @@
 export type Deposit = {
     uuid?: string
-    date: string
     fee: number
     depositAmount: number
     exchangeToken: string
     exchangePrice: number
     totalAmount: number
+    depositDate: string
 }
 
 export type CryptoDetails = {
