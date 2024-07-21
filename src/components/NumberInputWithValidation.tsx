@@ -8,15 +8,16 @@ type Props = {
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
     [propName: string]: any
     isRequired?: boolean
-    type?: string
-    isDisabled: boolean
 }
 
-export default function InputWithValidation({
-    isRequired, label, name, value, validationError, onChange, type, isDisabled, dynamicProps
+/**
+ * maybe this can be deleted?
+ * this is a duplicate of InputWithValidation but with added type, step and min
+ */
+export default function NumberInputWithValidation({
+    isRequired, label, name, value, validationError, onChange, dynamicProps
 }: Props) {
     return <Input
-        type={type || "text"}
         label={label}
         name={name}
         value={value}
@@ -25,7 +26,9 @@ export default function InputWithValidation({
         errorMessage={validationError}
         onChange={onChange}
         isRequired={isRequired}
-        isDisabled={isDisabled}
         {...dynamicProps}
+        type="number"
+        step="0.01"
+        min="0"
     />
 }

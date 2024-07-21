@@ -1,9 +1,12 @@
+import { parseISO, isValid } from 'date-fns';
+
 type DateReturnType = {
     month: number
     monthString: string
     year: number
     day: number
 }
+
 export const convertToReadableDateObject = (dateString: string): DateReturnType => {
     const date = new Date(dateString)
     const month = date.getMonth() + 1;
@@ -14,4 +17,9 @@ export const convertToReadableDateObject = (dateString: string): DateReturnType 
     const monthString = monthNames[month - 1]
 
     return { month, day, year, monthString }
+}
+
+export const isValidDate = (dateString: string): boolean => {
+    const date = parseISO(dateString);
+    return isValid(date);
 }

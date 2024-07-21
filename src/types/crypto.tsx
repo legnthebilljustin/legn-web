@@ -22,3 +22,12 @@ export type TradeDetails = {
     finalCryptoAmount: number
     purchaseDate: string
 }
+
+export type DepositFormData = {
+    depositAmount: number
+    exchangeToken: string
+    exchangePrice: number
+    fee: number
+    totalAmount: number
+    depositDate: string
+}

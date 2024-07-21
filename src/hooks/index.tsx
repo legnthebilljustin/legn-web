@@ -1,5 +1,17 @@
+// Credit
+
+// Crypto
 import { useFetchDeposits } from "./crypto/useFetchDeposits";
 
+// General
+import { useFormData } from "./general/useFormData";
+
 export {
-    useFetchDeposits
+    // Credit
+
+    // Crypto
+    useFetchDeposits,
+
+    // General
+    useFormData,
 }
