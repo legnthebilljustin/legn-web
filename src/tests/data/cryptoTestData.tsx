@@ -8,7 +8,7 @@ export const depositsTestData: Deposit[] = [
         exchangePrice: 5059,
         fee: 2500,
         totalAmount: 988,
-        date: "2024-02-23"
+        depositDate: "2024-02-23"
     },
     {
         uuid: "1t352adn3k1",
@@ -17,7 +17,7 @@ export const depositsTestData: Deposit[] = [
         exchangePrice: 5254,
         fee: 2500,
         totalAmount: 241231,
-        date: "2024-02-12"
+        depositDate: "2024-02-12"
     },
 ]
 

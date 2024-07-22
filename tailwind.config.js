@@ -8,7 +8,12 @@ export default {
 		"./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				"custom-red-danger": "#4a162a",
+				"custom-red-dangertext": "#e13c77"
+			}
+		},
 	},
 	darkMode: "class",
   	plugins: [nextui()], 

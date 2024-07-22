@@ -13,7 +13,7 @@ export const TOTAL_AMOUNT_LABEL = "Total Amount(USD)"
 export const TOTAL_AMOUNT_KEY = "totalAmount"
 
 export const DEPOSIT_DATE_LABEL = "Date"
-export const DEPOSIT_DATE_KEY = "date"
+export const DEPOSIT_DATE_KEY = "depositDate"
 
 export const DEPOSITS_TABLE_COLUMNS = [
     { name: DEPOSIT_AMOUNT_LABEL, id: DEPOSIT_AMOUNT_KEY },
