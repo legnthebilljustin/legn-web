@@ -15,7 +15,7 @@ export type CryptoDetails = {
 }
 
 export type TradeDetails = {
-    uuid: string
+    uuid?: string
     entryPrice: number
     amountUSD: number
     fee: number
@@ -30,4 +30,12 @@ export type DepositFormData = {
     fee: number
     totalAmount: number
     depositDate: string
+}
+
+export type TradeFormDataType = {
+    entryPrice: number
+    amountUSD: number
+    fee: number
+    finalCryptoAmount: number
+    tradeDate: string
 }

@@ -1,12 +1,32 @@
 import { AddNoteIcon } from "@/assets/icons/AddNoteIcon";
-import { InputWithValidation } from "@/components";
+import { InputWithValidation, NumberInputWithValidation } from "@/components";
 import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from "@nextui-org/react";
+import { useFormData, useTradeFormValidator } from "@/hooks";
+import { TradeFormDataType } from "@/types/crypto";
+
+const TradeFormData: TradeFormDataType = {
+    entryPrice: 0,
+    amountUSD: 0,
+    fee: 0,
+    finalCryptoAmount: 0,
+    tradeDate: ""
+}
 
 export default function AddDepositForm() {
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const {
+        formData,
+        handleInputChange,
+        handleNumberInputChange,
+        clearFormData
+    } = useFormData({ formDataProp: TradeFormData })
 
-    const handleInputChange = () => {
+    const { validateTradeForm, validationErrors } = useTradeFormValidator();
+    
 
+    const handleSubmit = () => {
+        const isValidated = validateTradeForm(formData as TradeFormDataType)
+        // code here to handle adding trade
     }
 
     return (
@@ -24,45 +44,41 @@ export default function AddDepositForm() {
                         <>
                             <ModalHeader>Add trade</ModalHeader>
                             <ModalBody>
-                                <InputWithValidation
-                                    type="text"
+                                <NumberInputWithValidation
                                     label="Entry Price" name="entryPrice"
                                     isRequired={true}
-                                    value={"awdsa"}
-                                    onChange={handleInputChange}
-                                    validationError=""
+                                    value={formData?.entryPrice}
+                                    onChange={handleNumberInputChange}
+                                    validationError={validationErrors?.entryPrice}
                                 />
-                                <InputWithValidation
-                                    type="text"
-                                    label="Purchased Amount" name="purchasedAmount"
+                                <NumberInputWithValidation
+                                    label="Purchased Amount (USD)" name="amountUSD"
                                     isRequired={true}
-                                    value={"awdsa"}
-                                    onChange={handleInputChange}
-                                    validationError=""
+                                    value={formData?.amountUSD}
+                                    onChange={handleNumberInputChange}
+                                    validationError={validationErrors?.amountUSD}
                                 />
-                                <InputWithValidation
-                                    type="text"
+                                <NumberInputWithValidation
                                     label="Fee" name="fee"
                                     isRequired={true}
-                                    value={"awdsa"}
-                                    onChange={handleInputChange}
-                                    validationError=""
+                                    value={formData?.fee}
+                                    onChange={handleNumberInputChange}
+                                    validationError={validationErrors?.fee}
                                 />
-                                <InputWithValidation
-                                    type="text"
+                                <NumberInputWithValidation
                                     label="Final Crypto Amount" name="finalCryptoAmount"
                                     isRequired={true}
-                                    value={"awdsa"}
-                                    onChange={handleInputChange}
-                                    validationError=""
+                                    value={formData?.finalCryptoAmount}
+                                    onChange={handleNumberInputChange}
+                                    validationError={validationErrors?.finalCryptoAmount}
                                 />
                                 <InputWithValidation
                                     type="text"
-                                    label="Date" name="purchaseDate"
+                                    label="Date" name="tradeDate"
                                     isRequired={true}
-                                    value={"awdsa"}
+                                    value={formData?.tradeDate}
                                     onChange={handleInputChange}
-                                    validationError=""
+                                    validationError={validationErrors?.tradeDate}
                                 />
 
                             </ModalBody>
@@ -70,7 +86,7 @@ export default function AddDepositForm() {
                                 <Button color="danger" variant="light" onPress={onClose}>
                                     Close
                                 </Button>
-                                <Button color="primary" onClick={() => ""}>
+                                <Button color="primary" onPress={handleSubmit}>
                                     Create
                                 </Button>
                             </ModalFooter>

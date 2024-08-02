@@ -3,6 +3,7 @@
 // Crypto
 import { useFetchDeposits } from "./crypto/useFetchDeposits";
 import { useFetchCryptos } from "./crypto/useFetchCryptos";
+import { useTradeFormValidator } from "./crypto/useTradeFormValidator";
 import { useFetchCryptoTrades } from "./crypto/useFetchCryptoTrades";
 
 // General
@@ -15,7 +16,8 @@ export {
     useFetchDeposits,
     useFetchCryptos,
     useFetchCryptoTrades,
-
+    useTradeFormValidator,
+    
     // General
     useFormData,
 }
