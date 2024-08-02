@@ -1,7 +1,7 @@
 import { CryptoDetails } from "@/types/crypto"
 import { Card, CardBody } from "@nextui-org/react"
-import Percentage from "./Percentage"
-import { useNavigate } from "react-router-dom"
+// import Percentage from "./Percentage"
+import { useLocation, useNavigate } from "react-router-dom"
 
 type Props = {
     crypto: CryptoDetails
@@ -11,9 +11,14 @@ export default function CryptoCard({ crypto }: Props) {
 
     const toActiveTrades = () => {
         if (crypto?.uuid) {
-            navigate(`/crypto/activeTrades/${crypto.uuid}`)
+            navigate(
+                `/crypto/activeTrades/${crypto.uuid}`,
+                {state: {
+                    name: crypto.name,
+                    percentage: 90
+                }}
+            )
         }
-        
     }
 
     return (
@@ -23,7 +28,7 @@ export default function CryptoCard({ crypto }: Props) {
             <CardBody className="px-6">
                 <div className="inline-flex align-baseline justify-between">
                     <small className="text-default-500">{ crypto.code }</small>
-                    <Percentage percent={90} />
+                    {/* <Percentage percent={90} /> */}
                     
                 </div>
                 <p className="text-md">{ crypto.name }</p>

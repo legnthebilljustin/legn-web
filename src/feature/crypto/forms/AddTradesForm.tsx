@@ -11,7 +11,7 @@ export default function AddDepositForm() {
 
     return (
         <>
-            <div className="text-right">
+            <div className="text-right mb-4">
                 <Button color="primary" size="sm" variant="shadow"
                     startContent={<AddNoteIcon />} onClick={onOpen}
                 >
