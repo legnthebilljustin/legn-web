@@ -1,5 +1,5 @@
 
-import { ChangeEvent, useCallback, useEffect, useState } from "react"
+import { ChangeEvent, useCallback, useState } from "react"
 
 type formDataMap = Record<string, any>
 type ChangeEventMap = ChangeEvent<HTMLInputElement>
@@ -21,10 +21,6 @@ export function useFormData({ formDataProp }: Props): ReturnType {
     }
 
     const [formData, setFormData] = useState<formDataMap>(formDataProp)
-
-    useEffect(() => {
-        setFormData(formDataProp)
-    }, [formDataProp])
 
     const handleInputChange = useCallback((event: ChangeEventMap) => {
         const { name, value } = event.target

@@ -14,8 +14,8 @@ export const fetchDeposits = async(): Promise<DepositListResponse> => {
     const response = await client.get('/crypto/v1/deposits');
 
     return {
-        deposits: response.data.deposits,
-        totalDepositAmount: response.data.totalDepositAmount
+        deposits: response.data?.deposits,
+        totalDepositAmount: response.data?.totalDepositAmount
     }
 }
 

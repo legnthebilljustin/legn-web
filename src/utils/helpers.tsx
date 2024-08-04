@@ -10,3 +10,7 @@ export const isAnEmptyObject = (obj: object): boolean => {
 }
 
 export const determineInputVariant = (key: any) => key ? "bordered" : "flat";
+
+export const validateField = () => {
+    
+}

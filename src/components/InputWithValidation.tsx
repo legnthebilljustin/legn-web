@@ -9,7 +9,7 @@ type Props = {
     [propName: string]: any
     isRequired?: boolean
     type?: string
-    isDisabled: boolean
+    isDisabled?: boolean
 }
 
 export default function InputWithValidation({

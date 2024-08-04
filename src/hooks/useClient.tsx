@@ -24,11 +24,15 @@ client.interceptors.response.use(
 
     function (error: AxiosError) {
         if (error?.response?.status === 401) {
-            window.location.href = "/errors/unauthenticated"
+            return window.location.href = "/errors/unauthenticated"
         }
+
         else if (error.response?.status === 403) {
-            window.location.href = "/errors/unauthorized"
+            return window.location.href = "/errors/unauthorized"
         }
-        return error;
+
+        const err = error.response?.data || { error: [], message: "Unknown error." }
+
+        return Promise.reject(err);
     }
 )
