@@ -17,7 +17,7 @@ export default function ActiveTrades() {
             <div className="container py-5 px-2 max-w-md">
                 <JustifyBetweenContainer>
                     <div className="text-lg dmsans-medium">{ name }</div>
-                    <AddTradesForm />
+                    { cryptoUuid && <AddTradesForm cryptoUuid={cryptoUuid} />}
                 </JustifyBetweenContainer>
                 { percentage && <TradeOverview percentage={percentage}/>}
                 <Divider className="mb-4" />

@@ -1,7 +1,7 @@
 import { Card, CardBody } from "@nextui-org/react"
 
 type Props = {
-    error: string
+    error: string | any
 }
 
 export default function ErrorMessage({ error }: Props) {
