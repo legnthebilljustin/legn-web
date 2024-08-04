@@ -9,7 +9,7 @@ import { useTransactionFormValidator } from "@/hooks/credit/useTransactionFormVa
 
 type Prop = {
     categories: TransactionCategory[] | [] | undefined
-    addTransaction: Function
+    addTransaction: (formData: any) => void
 }
 
 type TransactionCategory = {

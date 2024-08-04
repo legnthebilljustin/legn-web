@@ -1,7 +1,7 @@
 import { CryptoDetails } from "@/types/crypto"
 import { Card, CardBody } from "@nextui-org/react"
 // import Percentage from "./Percentage"
-import { useLocation, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 type Props = {
     crypto: CryptoDetails

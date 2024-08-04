@@ -12,7 +12,7 @@ type ReturnType = {
     formData: formDataMap
     handleInputChange: (event: ChangeEventMap) => void
     handleNumberInputChange: (event: ChangeEventMap) => void
-    clearFormData: () => void
+    clearFormData: (formDataProp: formDataMap) => void
 }
 
 export function useFormData({ formDataProp }: Props): ReturnType {
@@ -53,7 +53,7 @@ export function useFormData({ formDataProp }: Props): ReturnType {
         
     }, [setFormData])
 
-    const clearFormData = useCallback(() => {
+    const clearFormData = useCallback((formDataProp: formDataMap) => {
         setFormData(formDataProp)
     }, [setFormData])
 

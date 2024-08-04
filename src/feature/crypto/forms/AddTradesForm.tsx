@@ -38,7 +38,7 @@ export default function AddTradesForm({ cryptoUuid }: Props) {
         if (isValidated) {
             mutate(formData as TradeFormDataType, {
                 onSuccess: () => {
-                    clearFormData();
+                    clearFormData(initialFormData);
                     onClose();
                 },
                 onError: (error: any) => {

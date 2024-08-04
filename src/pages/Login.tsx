@@ -10,7 +10,7 @@ export type LoginFormData = {
     password: string
 }
 
-const Login: React.FC<{}> = () => {
+export default function Login() {
     const { updateUser } = useAuth();
     const [ formData, setFormData ] = useState<LoginFormData>({
         email: "", password: ""
@@ -94,5 +94,3 @@ const Login: React.FC<{}> = () => {
         
     )
 }
-
-export default Login

@@ -7,7 +7,7 @@ import { useCreditCardFormValidator } from "@/hooks/credit";
 import { CreditCardFormData } from "@/types/credit/card";
 
 type Props = {
-    addCreditCard: Function
+    addCreditCard: (formData: any) => void
 }
 
 const AddCreditCardForm: React.FC<Props> = ({ addCreditCard }) => {

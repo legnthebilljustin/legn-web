@@ -15,7 +15,7 @@ type ReturnTypes = {
     isFetching: boolean
     didFetchFail: boolean
     error: string | null,
-    refetch: Function,
+    refetch: () => void,
     runningBalance: number
     totalRewardPoints: number
 }

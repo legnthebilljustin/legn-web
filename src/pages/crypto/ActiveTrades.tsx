@@ -10,7 +10,7 @@ export default function ActiveTrades() {
     const location = useLocation();
     const { name, percentage } = location.state || {}
 
-    const { trades, isLoading, isError } = useFetchCryptoTrades(cryptoUuid)
+    const { trades, isLoading } = useFetchCryptoTrades(cryptoUuid)
 
     return (
         <div className="flex justify-center">

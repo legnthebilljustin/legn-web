@@ -1,8 +1,6 @@
 import { PropsWithChildren } from "react"
 
-type Props =  PropsWithChildren & {
-
-}
+type Props =  PropsWithChildren
 
 export default function JustifyBetweenContainer({ children }: Props) {
     return (

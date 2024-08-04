@@ -8,7 +8,7 @@ import { DepositFormData } from "@/types/crypto";
 import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from "@nextui-org/react";
 import { useMutation } from "react-query";
 
-const depositFormData: DepositFormData = {
+const initialDepositFormData: DepositFormData = {
     depositAmount: 0,
     exchangeToken: "USDT",
     exchangePrice: 0,
@@ -24,7 +24,7 @@ export default function AddDepositForm() {
         handleInputChange,
         handleNumberInputChange,
         clearFormData
-    } = useFormData({ formDataProp: depositFormData })
+    } = useFormData({ formDataProp: initialDepositFormData })
     const { validateDepositForm, validationErrors } = useDepositFormValidator()
     const { 
         isLoading: isCreatingDeposit, 
@@ -42,7 +42,7 @@ export default function AddDepositForm() {
         if (isValidated) {
             mutate(formData as DepositFormData, {
                 onSuccess: () => {
-                    clearFormData()
+                    clearFormData(initialDepositFormData)
                     onClose()
                 }
             })
